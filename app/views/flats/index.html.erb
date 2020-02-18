@@ -1,0 +1,10 @@
+<ul>
+  <% @flats.each do |id, flat| %>
+    <li><%= flat[:name] %> <%= flat[:planet] %></li>
+    <li><%= flat[:description] %> </li>
+    <li><%= flat[:capacity] %> </li>
+    <li><%= flat[:rating] %> </li>
+
+
+  <% end %>
+</ul>
