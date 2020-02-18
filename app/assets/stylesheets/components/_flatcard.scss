@@ -1,0 +1,96 @@
+.flatcard {
+  // background: #E5E5E5;
+  position: relative;
+  width: 1440px;
+  height: 900px;
+
+  background: #050305;
+}
+
+.flatcard h1 {
+position: absolute;
+width: 379px;
+height: 77px;
+left: 48px;
+top: 369px;
+
+font-family: Exo 2;
+font-style: normal;
+font-weight: bold;
+font-size: 48px;
+line-height: 160%;
+
+/* identical to box height, or 77px */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+}
+
+.flatcard-description {
+position: absolute;
+width: 440px;
+height: 87px;
+left: 48px;
+top: 470px;
+
+font-family: Exo 2;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 160%;
+
+/* or 29px */
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+}
+
+.flatcard-planet {
+  position: absolute;
+  width: 86px;
+  height: 58px;
+  left: 616px;
+  top: 96px;
+
+  font-family: Exo 2;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 160%;
+
+  /* identical to box height, or 58px */
+  display: flex;
+  align-items: center;
+
+  color: #FFFFFF;
+}
+
+.flatcard-rating {
+  position: absolute;
+  width: 440px;
+  height: 87px;
+  left: 48px;
+  top: 520px;
+}
+
+.flatcard-image {
+  position: absolute;
+  width: 560px;
+  height: 900px;
+  left: 0px;
+  top: 0px;
+  background-size: cover;
+
+  background: url(nicolas-lobos-kGtFjYdm7DI-unsplash.jpg);
+}
+
+.flatcard-cards {
+  position: absolute;
+  width: 809px;
+  height: 678px;
+  left: 595px;
+  top: 218px;
+}
+
