@@ -1,10 +1,9 @@
 <ul>
-  <% @flats.each do |id, flat| %>
-    <li><%= flat[:name] %> <%= flat[:planet] %></li>
+  <% @flats.each do |flat| %>
+    <li><%= link_to flat.name, flat_path(flat) %> <%= flat[:planet] %></li>
     <li><%= flat[:description] %> </li>
-    <li><%= flat[:capacity] %> </li>
     <li><%= flat[:rating] %> </li>
-
-
   <% end %>
 </ul>
+
+<%= link_to "Add a flat", new_flat_path, class: "btn btn-primary" %>
