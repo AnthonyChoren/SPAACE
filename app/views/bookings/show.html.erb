@@ -1,0 +1,9 @@
+<h1>booking infos on <%= @booking[:name] %></h1>
+<p>From  <%= @booking[:start_time] %></p>
+<p>To <%= @booking[:end_time] %></p>
+
+<%= link_to "Cancel reservation", flat_booking_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-primary"  %>
+<!-- /flats/:flat_id/bookings/:id(.:format) -->
+
+
+<%= link_to "Back home", flats_path, class: "btn btn-primary" %>
