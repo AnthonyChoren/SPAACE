@@ -1,66 +1,46 @@
-.flatcard {
-  // background: #E5E5E5;
-  position: relative;
-  width: 1440px;
-  height: 900px;
+.flatcard-container {
+  background: black;
+  width: 1000px;
+  height: 1000px;
+}
 
-  background: #050305;
+.flatcard {
+  position: absolute;
+  left: 8.33%;
+  right: 56.67%;
+  top: 55.78%;
+  bottom: 14.44%;
+  padding: 10px;
+
+  background: linear-gradient(0deg, rgba(81, 84, 109, 0.24), rgba(81, 84, 109, 0.24));
+  backdrop-filter: blur(56px);
+
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 0px 16px 16px 16px;
 }
 
 .flatcard h1 {
-position: absolute;
-width: 379px;
-height: 77px;
-left: 48px;
-top: 369px;
-
-font-family: Exo 2;
-font-style: normal;
-font-weight: bold;
-font-size: 48px;
-line-height: 160%;
-
-/* identical to box height, or 77px */
-display: flex;
-align-items: center;
-
-color: #FFFFFF;
-}
-
-.flatcard-description {
-position: absolute;
-width: 440px;
-height: 87px;
-left: 48px;
-top: 470px;
-
-font-family: Exo 2;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 160%;
-
-/* or 29px */
-display: flex;
-align-items: center;
-
-color: #FFFFFF;
-}
-
-.flatcard-planet {
-  position: absolute;
-  width: 86px;
-  height: 58px;
-  left: 616px;
-  top: 96px;
-
   font-family: Exo 2;
   font-style: normal;
-  font-weight: 600;
-  font-size: 36px;
+  font-weight: bold;
+  font-size: 48px;
   line-height: 160%;
 
-  /* identical to box height, or 58px */
+  /* identical to box height, or 77px */
+  display: flex;
+  align-items: center;
+
+  color: #FFFFFF;
+  }
+
+.flatcard-description {
+  font-family: Exo 2;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 160%;
+
+  /* or 29px */
   display: flex;
   align-items: center;
 
@@ -77,11 +57,11 @@ color: #FFFFFF;
 
 .flatcard-image {
   position: absolute;
-  width: 560px;
-  height: 900px;
-  left: 0px;
-  top: 0px;
-  background-size: cover;
+  width: 450px;
+  height: 260px;
+  left: 8.33%;
+  top: 210px;
+  background-size: 100% !important;
 
   background: url(nicolas-lobos-kGtFjYdm7DI-unsplash.jpg);
 }
@@ -94,3 +74,19 @@ color: #FFFFFF;
   top: 218px;
 }
 
+.flatcard-form {
+  position: absolute;
+  left: 62.78%;
+  right: 8.47%;
+  top: 22.22%;
+  bottom: 14.44%;
+
+  display:flex;
+  align-items: flex-end;
+
+  background: linear-gradient(0deg, rgba(81, 84, 109, 0.32), rgba(81, 84, 109, 0.32));
+  backdrop-filter: blur(56px);
+
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 16px;
+}
