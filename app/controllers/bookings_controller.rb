@@ -8,19 +8,24 @@ class BookingsController < ApplicationController
   end
 
   def new
+    @flat = Flat.find(params[:flat_id])
     @booking = Booking.new
   end
 
   def create
-    @booking = Booking.new(params[:booking])
+
+    @booking = Booking.new(booking_params)
+    @booking.user_id = current_user.id
+    @booking.flat = Flat.find(params[:flat_id])
 
     if @booking.save
-      redirect_to flats_path(@flat)
+      redirect_to flat_booking_path(@booking.id, @booking.flat)
+       # flat_booking GET    /flats/:flat_id/bookings/:id(.:format)                                                   bookings#show
+
+      #index reservation
     else
       render :new
     end
-
-    @booking.save
   end
 
   def edit
@@ -35,6 +40,7 @@ class BookingsController < ApplicationController
   def destroy
     find_booking
     @booking.destroy
+    redirect_to flats_path
   end
 
   private
