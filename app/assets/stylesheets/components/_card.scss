@@ -1,0 +1,108 @@
+
+.big_card_index {
+  border-radius: 16px;
+  width: 320px;
+  height: 420px;
+  box-shadow: 0px 24px 40px rgba(0, 0, 0, 0.08);
+}
+
+.background_blur {
+  position: absolute;
+  left: 38%;
+  right: -1.74%;
+  top: 21%;
+  bottom: 28%;
+
+  background: linear-gradient(0deg, rgba(81, 84, 109, 0.32), rgba(81, 84, 109, 0.32));
+  backdrop-filter: blur(40px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 24px;
+}
+
+.big_title {
+  position: absolute;
+  width: 451px;
+  height: 154px;
+  left: 120px;
+  top: 240px;
+
+  font-family: Exo 2;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 160%;
+  /* or 77px */
+
+  display: flex;
+  align-items: center;
+
+  color: #FFFFFF;
+}
+
+.text {
+  position: absolute;
+  width: 440px;
+  height: 87px;
+  left: 120px;
+  top: 426px;
+
+  font-family: Exo 2;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 160%;
+  /* or 29px */
+
+  display: flex;
+  align-items: center;
+
+  color: #FFFFFF;
+}
+
+
+.cta_home {
+  background-color: #408FB6;
+  padding: 16px 24px;
+  position: absolute;
+  left: 120px;
+  top: 553px;
+
+  box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.16);
+  text-align: center;
+  border-radius: 50px;
+
+  box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.16);
+}
+
+.card_index_1 {
+  position: absolute;
+  width: 320px;
+  height: 420px;
+  left: 671px;
+  top: 240px;
+}
+
+.card_index_2 {
+  position: absolute;
+  width: 320px;
+  height: 420px;
+  left: 1015px;
+  top: 240px;
+}
+
+.chevron {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  left: 647px;
+  top: 724px;
+}
+
+.chevron2 {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  left: 743px;
+  top: 724px;
+}
