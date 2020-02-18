@@ -1,6 +1,6 @@
 <ul>
   <% @flats.each do |flat| %>
-    <li><%= flat[:name] %> <%= flat[:planet] %></li>
+    <li><%= link_to flat.name, flat_path(flat) %> <%= flat[:planet] %></li>
     <li><%= flat[:description] %> </li>
     <li><%= flat[:rating] %> </li>
   <% end %>
