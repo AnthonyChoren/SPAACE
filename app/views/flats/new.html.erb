@@ -1,0 +1,18 @@
+
+<%= form_for(@flat) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :planet %>
+  <%= f.text_field :planet %>
+
+  <%= f.label :capacity %>
+  <%= f.number_field :capacity %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+
+
+  <%= f.submit %>
+<% end %>
