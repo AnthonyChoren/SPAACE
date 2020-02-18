@@ -6,6 +6,9 @@
 
 <%= link_to "Update flat", edit_flat_path, class: "btn btn-primary"  %>
 
+
+<%= link_to "Delete", flat_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-primary"  %>
+
 <%= link_to "Back home", flats_path, class: "btn btn-primary"  %>
 
 
