@@ -13,7 +13,6 @@ class FlatsController < ApplicationController
 
   def create
     @flat =Flat.new(flat_params)
-    raise
     @flat.save
   end
 
