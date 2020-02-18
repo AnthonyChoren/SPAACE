@@ -4,7 +4,7 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @booking = Booking.find(params[:id])
+    find_booking
   end
 
   def new
@@ -13,20 +13,38 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(params[:booking])
+
+    if @booking.save
+      redirect_to flats_path(@flat)
+    else
+      render :new
+    end
+
     @booking.save
   end
 
   def edit
-    @booking = Booking.find(params[:id])
+    find_booking
   end
 
   def update
-    @booking = Booking.find(params[:id])
+    find_booking
     @booking.update(booking_params)
   end
 
   def destroy
-    @booking = Booking.find(params[:id])
+    find_booking
     @booking.destroy
   end
+
+  private
+
+  def booking_params
+    params.require(:booking).permit(:start_time, :end_time)
+  end
+
+  def find_booking
+    @booking = Booking.find(params[:id])
+  end
+
 end
