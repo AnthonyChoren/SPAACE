@@ -1,15 +1,21 @@
-<div class="container">
-  <div class="row">
-      <h1 class="big_title text-left">Des hébergements, au coeur des étoiles</h1>
-      <p class="text text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Sed urna consequat turpis id eget a eget. Et mauris pulvinar
-      dictum metus sapien.</p>
-      <a href="" class="cta_home">Find a flat</a>
-      <div class="background_blur"></div>
-      <%= image_tag "Mars.png", alt: "alttext", :class => "card_index_1" %>
-      <%= image_tag "Lune.png", alt: "alttext", :class => "card_index_2" %>
-      <%= image_tag "Chevron.png", alt: "alttext", :class => "chevron" %>
-      <%= image_tag "Chevron2.png", alt: "alttext", :class => "chevron2" %>
+<body class="background">
+  <div class="container">
+    <div class="row">
+        <h1 class="big_title text-left">Des hébergements, au coeur des étoiles</h1>
+        <p class="text text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Sed urna consequat turpis id eget a eget. Et mauris pulvinar
+        dictum metus sapien.</p>
+        <a href="" class="cta_home">Find a flat</a>
+        <div class="background_blur"></div>
+        <%= link_to localisation_path(planete: "mars") do %>
+          <%= image_tag "Mars.png", alt: "alttext", :class => "card_index_1" %>
+        <% end %>
+        <%= image_tag "Lune.png", alt: "alttext", :class => "card_index_2" %>
+        <%= image_tag "Chevron.png", alt: "alttext", :class => "chevron" %>
+        <%= image_tag "Chevron2.png", alt: "alttext", :class => "chevron2" %>
+    </div>
   </div>
-</div>
+</body>
+
+
 

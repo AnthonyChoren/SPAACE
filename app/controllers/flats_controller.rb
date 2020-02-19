@@ -31,6 +31,10 @@ class FlatsController < ApplicationController
      redirect_to flats_path
   end
 
+  def localisation
+    raise
+  end
+
 
 private
 
