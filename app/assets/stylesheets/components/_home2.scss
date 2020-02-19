@@ -1,0 +1,62 @@
+.card {
+  background: linear-gradient(0deg, rgba(81, 84, 109, 0.32), rgba(81, 84, 109, 0.32)) !important;
+  backdrop-filter: blur(40px) !important;
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 24px !important;
+
+}
+
+.border_img {
+  border-radius: 24px 24px 0% 0%;
+}
+
+.card_price {
+  text-align: right;
+  float: right;
+  margin: 0px;
+  font-weight: lighter;
+}
+
+.card-top-text {
+  font-size: 12px;
+  text-transform: uppercase;
+  opacity: 50%;
+  margin-bottom: 8px;
+}
+
+.big-text-planet {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+  font-family: "Exo 2"
+}
+
+.little-text-planet {
+  align-items: center;
+  text-align: left;
+  color: white;
+  font-weight: lighter;
+  font-size: 18px;
+  font-family: "Exo 2";
+  width: 400px !important;
+  line-height: 160%;
+  margin-top: 24px;
+}
+
+.thumbnail {
+  position: relative;
+}
+
+.caption {
+  position: absolute;
+  top: 45%;
+  left: 10%;
+  width: 100%;
+}
+
+.col-sm {
+  padding: 0 !important;
+}
