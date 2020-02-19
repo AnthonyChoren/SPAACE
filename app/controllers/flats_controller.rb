@@ -31,12 +31,14 @@ class FlatsController < ApplicationController
      redirect_to flats_path
   end
 
-  # def localisation
-  #   case planet
-  #   when planet: "mars"
-  #     redirect_to localisation_path
-  #   end
-  # end
+  def localisation
+    # case planet
+    # when planet: "mars"
+    #   redirect_to localisation_path
+    # when planet: "moon"
+    #   redirect_to localisation_path
+    # end
+  end
 
 
 private
