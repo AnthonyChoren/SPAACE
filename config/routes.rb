@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :flats do
     resources :bookings, except: [:index]
   end
-  get "/localisation", to: "pages#home2"
+  get "/localisation", to: "flats#localisation"
 end
