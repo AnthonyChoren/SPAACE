@@ -1,4 +1,14 @@
+<h1>my bookings (flats I go to-- Still need to do flats I rent to someone if I do)</h1>
+ <h2> Les reservations de <%= current_user["first_name"] %>  <%= current_user["last_name"] %>       </h2>
+
 <% @bookings.each do |booking| %>
-  <h2><%= bookings.user_id %></h2>
-  <p><%= bookings.flats_id %></p>
+  <p>Your reservation on<%= booking.flat.planet %></p>
+  <p>Name of the flat<%= booking.flat.name %></p>
+  <p>From  <%= booking.start_time %></p>
+  <p>To <%= booking.end_time%></p>
 <% end %>
+
+
+
+ <h1>flats I rent to someone </h1>
+
