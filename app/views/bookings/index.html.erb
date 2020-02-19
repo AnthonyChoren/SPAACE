@@ -1,5 +1,5 @@
-<h1>my bookings (flats I go to-- Still need to do flats I rent to someone if I do)</h1>
- <h2> Les reservations de <%= current_user["first_name"] %>  <%= current_user["last_name"] %>       </h2>
+<h1>Bookings of  <%= current_user["first_name"] %>  <%= current_user["last_name"] %> </h1>
+
 
 <% @bookings.each do |booking| %>
   <p>Your reservation on<%= booking.flat.planet %></p>
@@ -7,6 +7,8 @@
   <p>From  <%= booking.start_time %></p>
   <p>To <%= booking.end_time%></p>
 <% end %>
+
+<%= link_to "Back home", flats_path, class: "btn btn-primary"  %>
 
 
 

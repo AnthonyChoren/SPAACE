@@ -17,11 +17,9 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user_id = current_user.id
     @booking.flat = Flat.find(params[:flat_id])
-
     if @booking.save
-      redirect_to flat_booking_path(@booking.id, @booking.flat)
-       # flat_booking GET    /flats/:flat_id/bookings/:id(.:format)                                                   bookings#show
-
+      redirect_to flat_booking_path(flat_id:@booking.flat.id, id:@booking.id)
+       # flat_booking GET    /flats/:flat_id/bookings/:id(.:format)
       #index reservation
     else
       render :new
