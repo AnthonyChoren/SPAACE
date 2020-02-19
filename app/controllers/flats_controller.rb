@@ -32,7 +32,10 @@ class FlatsController < ApplicationController
   end
 
   def localisation
-    raise
+    case planet
+    when planet: "mars"
+      redirect_to localisation_path
+    end
   end
 
 
