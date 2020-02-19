@@ -19,11 +19,15 @@ class FlatsController < ApplicationController
   end
 
   def edit
+    @flat = Flat.find(params[:id])
   end
 
   def update
-    @flat.update(flat_params)
-    redirect_to flat_path(@flat)
+    if @flat.update(flat_params)
+      redirect_to flat_path(@flat)
+    else
+      render :edit
+    end
   end
 
   def destroy
@@ -48,7 +52,7 @@ def set_flat
 end
 
 def flat_params
-  params.require(:flat).permit(:name, :planet, :capacity, :description)
+  params.require(:flat).permit(:name, :planet, :capacity, :description, :price)
 end
 
 end
