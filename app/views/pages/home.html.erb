@@ -7,10 +7,12 @@
         dictum metus sapien.</p>
         <%= link_to 'Find a flat', flats_path, class: "cta_home" %>
         <div class="background_blur"></div>
-        <%= link_to flats_path(planet: "mars") do %>
+        <%= link_to planet_path(Planet.find_by(title: "Mars")) do %>
           <%= image_tag "Mars.png", alt: "alttext", :class => "card_index_1" %>
         <% end %>
+        <%= link_to planet_path(Planet.find_by(title: "Moon")) do  %>
         <%= image_tag "Lune.png", alt: "alttext", :class => "card_index_2" %>
+        <% end %>
         <%= image_tag "Venus.png", alt: "alttext", :class => "card_index_3" %>
         <%= image_tag "Chevron.png", alt: "alttext", :class => "chevron" %>
         <%= image_tag "Chevron2.png", alt: "alttext", :class => "chevron2" %>

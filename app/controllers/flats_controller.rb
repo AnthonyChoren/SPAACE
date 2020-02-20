@@ -3,7 +3,11 @@ class FlatsController < ApplicationController
   before_action :set_flat, only: [:show, :edit, :update, :destroy]
 
   def index
-    @flats  = Flat.all
+    if params[:planet].present?
+      render @flats = params[:planet].to_sym
+    else
+      @flats  = Flat.all
+    end
   end
 
   def show
@@ -41,14 +45,14 @@ class FlatsController < ApplicationController
      redirect_to flats_path
   end
 
-  def localisation
-    # case planet
-    # when planet: "mars"
-    #   redirect_to localisation_path
-    # when planet: "moon"
-    #   redirect_to localisation_path
-    # end
-  end
+  # def localisation
+  #   case planet
+  #   when planet: "mars"
+  #     redirect_to localisation_path
+  #   when planet: "moon"
+  #     redirect_to localisation_path
+  #   end
+  # end
 
 
 private
