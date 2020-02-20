@@ -1,11 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 offset-sm-2">
+      <%= simple_form_for [@flat] do |f| %>
+      <%= f.input :planet, collection: ["Mercury","Venus","Earth","Mars","Jupiter","Saturn","Uranus","Neptune"]  %>
+      <%= f.input :name %>
+      <%= f.input :capacity %>
+      <%= f.input :description%>
+      <%= f.input :price %>
+      <%= f.submit "Add a flat", class: "btn btn-primary" %>
+      <%= link_to "Back home", flats_path, class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
 
-<%= simple_form_for [@flat] do |f| %>
-  <%= f.input :name %>
-  <%= f.input :planet %>
-  <%= f.input :capacity %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.submit "Add a flat", class: "btn btn-primary" %>
-<% end %>
-<br><br>
-<%= link_to "Back home", flats_path, class: "btn btn-primary" %>
+
