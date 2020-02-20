@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-between">
-  <h2 class="m-3">Bookings of  <%= current_user["first_name"] %>  <%= current_user["last_name"] %> </h2>
+  <h2 class="m-3">Bookings of  <%= current_user.first_name %>  <%= current_user.last_name %> </h2>
   <%= link_to "Back home", flats_path, class: "btn btn-dark m-3"  %>
 </div>
 
