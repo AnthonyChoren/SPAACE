@@ -3,11 +3,7 @@ class FlatsController < ApplicationController
   before_action :set_flat, only: [:show, :edit, :update, :destroy]
 
   def index
-    if params[:planet].present?
-      render @flats = params[:planet].to_sym
-    else
-      @flats  = Flat.all
-    end
+    @flats  = Flat.all
   end
 
   def show
