@@ -1,11 +1,15 @@
 <h1>Bookings of  <%= current_user["first_name"] %>  <%= current_user["last_name"] %> </h1>
 
 
+
+
 <% @bookings.each do |booking| %>
-  <p>Your reservation on<%= booking.flat.planet %></p>
-  <p>Name of the flat<%= booking.flat.name %></p>
+  <h2>Your reservation on <%= booking.flat.planet %></h2>
+  <p>Flat <%= link_to booking.flat.name, flat_path(booking.flat) %></p>
   <p>From  <%= booking.start_time %></p>
   <p>To <%= booking.end_time%></p>
+<p><%= link_to "Cancel reservation", flat_booking_path(flat_id:booking.flat.id, id:booking.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-primary"  %></p>
+
 <% end %>
 
 <%= link_to "Back home", flats_path, class: "btn btn-primary"  %>
