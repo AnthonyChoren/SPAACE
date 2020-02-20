@@ -34,3 +34,21 @@
 </div>
 </body>
 
+
+
+
+
+<% @flats.each do |flat| %>
+<div class="grid-item">
+  <%= link_to flat_path(flat) do %>
+  <div class="card" style="margin-left: auto; margin-right: auto; margin-top: 24px;">
+    <%= cl_image_tag flat.photo.key, width: 320, height: 260, crop: :fill, class: "card-img-top border_img" %>
+    <div class="card-body">
+      <p class="card-top-text"><%= flat.planet.title %></p>
+      <h5 class="card-title"><%= flat.name %></h5>
+      <p class="card_price"><%= flat.price %>$/night</p>
+    </div>
+  </div>
+  <% end %>
+</div>
+<% end %>

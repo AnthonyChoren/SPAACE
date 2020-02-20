@@ -15,6 +15,14 @@
   background-repeat: no-repeat;
 }
 
+.background-moon {
+  background-image: url(moon-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -55,4 +63,7 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+
+
 
