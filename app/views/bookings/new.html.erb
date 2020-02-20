@@ -1,13 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 offset-sm-2">
+      <%= simple_form_for [@flat, @booking] do |f| %>
+        <%= f.input :start_time %>
+        <%= f.input :end_time %>
 
-<%= simple_form_for [@flat, @booking] do |f| %>
-  <%= f.input :start_time %>
-  <%= f.input :end_time %>
-
-  <%= f.submit "make a booking", class: "btn btn-primary" %>
-<% end %>
-<br><br>
-<%= link_to "Back home", flats_path, class: "btn btn-primary" %>
-
+        <%= f.submit "Make a booking", class: "btn btn-dark" %>
+      <% end %>
+      <br><br>
+      <%= link_to "Back home", flats_path, class: "btn btn-dark" %>
+    </div>
+  </div>
+</div>
 
 
   <!-- create_table "bookings", force: :cascade do |t|
