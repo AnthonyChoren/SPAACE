@@ -1,24 +1,24 @@
 <!-- Image -->
 <div>
-  <img src="nicolas-lobos-kGtFjYdm7DI-unsplash.jpg" alt="" class="flatcard-image">
+  <%= cl_image_tag @flat.photo.key, crop: :fill, class: "flatcard-image" %>
 </div>
 <!-- Description and Form -->
-<div class="flatcard-container">
+<div class="flatcard-container mt-4 mb-1 ml-4">
   <div class="flatcard">
     <h1><%= @flat[:name] %></h1>
 <!--   <p class="flatcard-planet"><%= @flat[:planet] %></p>
  -->  <p class="flatcard-description"><%= @flat[:description] %></p>
      <p class="flatcard-description"> We have space for: <%= @flat[:capacity] %> people</p>
-    <p class="flatcard-description"><%= @flat[:price] %> EUR</p>
-    <%= link_to "Book this flat", new_flat_booking_path(@flat), class: "btn btn-primary", id: "book-flat-btn" %>
+    <p class="flatcard-description"><%= @flat[:price].to_i %> $</p>
+    <%= link_to "Book this flat", new_flat_booking_path(@flat), id: "book-flat-btn" %>
   </div>
   <div>
   </div>
   <div class="">
-    <%= link_to "Update flat", edit_flat_path, class: "btn btn-dark"  %>
-    <%= link_to "Delete flat", flat_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-dark"  %>
-    <%= link_to "View your bookings", flat_bookings_path(@flat), class: "btn btn-dark"  %>
-    <%= link_to "Back home", flats_path, class: "btn btn-dark"  %>
+    <%= link_to "Update flat", edit_flat_path, class: "btn btn-dark m-1"  %>
+    <%= link_to "Delete flat", flat_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-dark m-1"  %>
+    <%= link_to "View your bookings", flat_bookings_path(@flat), class: "btn btn-dark m-1"  %>
+    <%= link_to "Back home", flats_path, class: "btn btn-dark m-1"  %>
   </div>
 </div>
 
