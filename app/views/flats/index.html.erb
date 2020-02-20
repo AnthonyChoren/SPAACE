@@ -25,7 +25,7 @@
   <div class="row">
     <div class="col-sm">
       <div class="card" style="width: 20rem; margin-left: auto; margin-right: auto; margin-top: 24px;">
-        <%= image_tag "mars1.png", alt: "alttext", class: "card-img-top border_img"%>
+        <%= cl_image_tag("https://res.cloudinary.com/dpdzk7keq/image/upload/v1582128674/test_tjf9zr.jpg", width: 320, height: 260, crop: :fill) %>
         <!-- <img class="card-img-top border_img" src="https://source.unsplash.com/random/200x100" alt="Card image cap"> -->
         <div class="card-body">
           <p class="card-top-text">Entire house</p>
@@ -56,5 +56,22 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <%= @flats.each do |flat| %>
+    <div class="col-sm">
+      <div class="card" style="width: 20rem; margin-left: auto; margin-right: auto; margin-top: 24px;">
+        <%= cl_image_tag(flat.photo.key, width: 320, height: 260, crop: :fill) %>
+        <div class="card-body">
+          <p class="card-top-text"><%= flat.planet %></p>
+          <h5 class="card-title"><%= flat.name %></h5>
+          <p class="card_price"><%= flat.price %></p>
+        </div>
+      </div>
+    </div>
+    <% end %>
   </div>
 </div>
