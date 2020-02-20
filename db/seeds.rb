@@ -8,16 +8,24 @@
 require "open-uri"
 
 
-# Flat.destroy_all
-# Planet.destroy_all
-# User.destroy_all
+Flat.destroy_all
+Planet.destroy_all
+User.destroy_all
 
 mars = Planet.create!(title: "Mars", description: "C’est une planète tellurique.")
+mars.save!
 moon = Planet.create!(title: "Moon", description: "C’est la lune")
+moon.save!
 
-# user = User.new(first_name: "user", last_name: "last", phone_number: "0615385223", email: "alice@gmail.com", password: "azerty")
 
-# file = URI.open("https://res.cloudinary.com/dpdzk7keq/image/upload/v1582194397/SwFs1sqQmv8yj2tbXCbUzVZu.jpg")
-# flat = Flat.new(name: "appart01", planet: mars, capacity: 3, description: "the place to be", price: 100.0, user: user)
-# flat.photo.attach(io: file, filename: "mars.jpg", content_type: "image/jpg")
-# flat.save!
+user = User.new(first_name: "user", last_name: "last", phone_number: "0615385223", email: "alice@gmail.com", password: "azerty")
+
+file = URI.open("https://res.cloudinary.com/dpdzk7keq/image/upload/v1582194397/SwFs1sqQmv8yj2tbXCbUzVZu.jpg")
+flat = Flat.new(name: "appart01", planet: mars, capacity: 3, description: "the place to be, on mars", price: 200.0, user: user)
+flat.photo.attach(io: file, filename: "mars.jpg", content_type: "image/jpg")
+flat.save!
+
+file = URI.open("https://res.cloudinary.com/dpdzk7keq/image/upload/v1582194397/SwFs1sqQmv8yj2tbXCbUzVZu.jpg")
+flat2 = Flat.new(name: "appart02", planet: moon, capacity: 30, description: "the place to be, on the moon", price: 100.0, user: user)
+flat2.photo.attach(io: file, filename: "mars.jpg", content_type: "image/jpg")
+flat2.save!
