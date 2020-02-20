@@ -14,6 +14,7 @@ class FlatsController < ApplicationController
 
   def create
     @flat =Flat.new(flat_params)
+    @flat.photo.attach(io: params[:flat][:photo], filename: "photo.jpg", content_type: "image/jpg")
     @flat.user = current_user
     if @flat.save
       redirect_to flat_path(@flat)
@@ -56,7 +57,7 @@ def set_flat
 end
 
 def flat_params
-  params.require(:flat).permit(:name, :planet, :capacity, :description, :price, :photo)
+  params.require(:flat).permit(:name, :planet, :capacity, :description, :price)
 end
 
 end
