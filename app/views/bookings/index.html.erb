@@ -1,20 +1,23 @@
-<h1>Bookings of  <%= current_user["first_name"] %>  <%= current_user["last_name"] %> </h1>
+<div class="d-flex justify-content-between">
+  <h2 class="m-3">Bookings of  <%= current_user["first_name"] %>  <%= current_user["last_name"] %> </h2>
+  <%= link_to "Back home", flats_path, class: "btn btn-dark m-3"  %>
+</div>
 
+  <!-- add the cloudanary img -->
 
-
-
+<div class="card mb-3">
 <% @bookings.each do |booking| %>
-  <h2>Your reservation on <%= booking.flat.planet %></h2>
-  <p>Flat <%= link_to booking.flat.name, flat_path(booking.flat) %></p>
-  <p>From  <%= booking.start_time %></p>
-  <p>To <%= booking.end_time%></p>
-<p><%= link_to "Cancel reservation", flat_booking_path(flat_id:booking.flat.id, id:booking.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-primary"  %></p>
-
+  <div class="card-body p-0">
+  <img src="nicolas-lobos-kGtFjYdm7DI-unsplash.jpg"  class="card-img-top" style="height: 200px; width: 100%" alt="">
+  <p class="card_text pl-2">The flat "<%= link_to booking.flat.name, flat_path(booking.flat) %>" is booked from  <%= booking.start_time %> to <%= booking.end_time%>.</p>
+  <p><%= link_to "Cancel Reservation", flat_booking_path(flat_id:booking.flat.id, id:booking.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-dark ml-2"  %></p>
+  </div>
 <% end %>
+</div>
 
-<%= link_to "Back home", flats_path, class: "btn btn-primary"  %>
+<%= link_to "Back home", flats_path, class: "btn btn-dark mb-4 m-3"  %>
+<!--
 
 
-
- <h1>flats I rent to someone </h1>
+ <h1>flats I rent to someone </h1> -->
 
