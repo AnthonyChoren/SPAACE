@@ -41,8 +41,12 @@ class FlatsController < ApplicationController
   end
 
   def destroy
-     @flat.destroy
-     redirect_to flats_path
+    if @flat.user_id == current_user.id
+      @flat.destroy
+      redirect_to flats_path
+    else
+      render :show
+    end
   end
 
   # def localisation
