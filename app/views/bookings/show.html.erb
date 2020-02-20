@@ -1,5 +1,5 @@
 <div class="card m-4">
-  <img src="background.jpg"  class="card-img-top" style="height: 200px; width: 100%;" alt="">
+  <%= cl_image_tag @booking.flat.photo.key, height: 200, crop: :fill, class: "card-img-top border_img" %>
   <!-- add the cloudanary img -->
   <div class="card-body p-3">
     <h5 class="card-title">You booked the flat "<%= @booking.flat.name %>"! </h5>
