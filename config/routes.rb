@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :flats do
     resources :bookings
   end
-  get "/localisation", to: "flats#localisation"
+  resources :planets, only: [:show]
 end

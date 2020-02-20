@@ -1,9 +1,13 @@
-<body class="background">
+<body class="background-mars">
   <div class="container">
     <div class="row">
       <div class="col">
-        <h1 class="big-text-planet">Liste de tous les hébergements</h1>
-        <p class="little-text-planet">Bienvenue sur notre site!</p>
+        <h1 class="big-text-planet">Mars</h1>
+        <p class="little-text-planet">C’est une planète tellurique, comme le sont Mercure, Vénus et la Terre,
+        environ dix fois moins massive que la Terre mais dix fois plus massive que la Lune. Sa topographie
+      présente des analogies aussi bien avec la Lune, à travers ses cratères et ses bassins d'impact, qu'avec
+    la Terre, avec des formations d'origine tectonique et climatique telles que des volcans, des rifts, des vallées,
+  des mesas, des champs de dunes et des calottes polaires. </p>
       </div>
     </div>
     <div class="row">
@@ -15,7 +19,7 @@
             <div class="card" style="margin-left: auto; margin-right: auto; margin-top: 24px;">
               <%= cl_image_tag flat.photo.key, width: 320, height: 260, crop: :fill, class: "card-img-top border_img" %>
               <div class="card-body">
-                <p class="card-top-text"><%= flat.planet.title %></p>
+                <p class="card-top-text"><%= flat.planet %></p>
                 <h5 class="card-title"><%= flat.name %></h5>
                 <p class="card_price"><%= flat.price %>$/night</p>
               </div>
