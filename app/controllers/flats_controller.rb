@@ -1,5 +1,6 @@
 class FlatsController < ApplicationController
   before_action :set_flat, only: [:show, :edit, :update, :destroy]
+
   def index
     @flats  = Flat.all
   end
@@ -13,9 +14,13 @@ class FlatsController < ApplicationController
 
   def create
     @flat =Flat.new(flat_params)
+    @flat.photo.attach(io: params[:flat][:photo], filename: "photo.jpg", content_type: "image/jpg")
     @flat.user = current_user
-    @flat.save
-    redirect_to flat_path(@flat)
+    if @flat.save
+      redirect_to flat_path(@flat)
+    else
+      render :new
+    end
   end
 
   def edit
