@@ -6,3 +6,53 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
+
+.background-mars {
+  background-image: url(background-mars.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+
+.grid-item {
+  width: 20rem;
+}
+
+.container {
+  justify-content: space-evenly;
+}
+
+.caption {
+  width: 100%;
+}
+
+/*Media Queries*/
+
+/*Smallest device*/
+@media (min-width: 100px) and (max-width: 575px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+

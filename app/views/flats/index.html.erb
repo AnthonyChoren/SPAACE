@@ -1,33 +1,35 @@
-<%= link_to "Add a flat", new_flat_path, class: "btn btn-primary" %>
-<div class="d-flex">
-  <div class="row" id="box-search">
-    <div class="thumbnail text-center">
-      <%= image_tag "mars_bg.png", alt: "alttext", :class => "img" %>
-      <div class="caption">
+<body class="background-mars">
+  <div class="container">
+    <%= link_to "Add a flat", new_flat_path, class: "btn btn-primary" %>
+    <div class="row">
+      <div class="col">
         <h1 class="big-text-planet">
           La planète rouge
         </h1>
         <p class="little-text-planet">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna consequat turpis id eget a eget. Et mauris pulvinar dictum metus sapien.</p>
       </div>
     </div>
-  </div>
-
-
-  <div class="container">
     <div class="row">
-      <% @flats.each do |flat| %>
-      <div class="col-sm">
-        <%= link_to flat_path(flat) do %>
-        <div class="card" style="width: 20rem; margin-left: auto; margin-right: auto; margin-top: 24px;">
-          <%= cl_image_tag flat.photo.key, width: 320, height: 260, crop: :fill, class: "card-img-top border_img" %>
-          <div class="card-body">
-            <p class="card-top-text"><%= flat.planet %></p>
-            <h5 class="card-title"><%= flat.name %></h5>
-            <p class="card_price"><%= flat.price %>$/night</p>
+      <div class="col">
+        <div class="grid-container">
+          <% @flats.each do |flat| %>
+          <div class="grid-item">
+            <%= link_to flat_path(flat) do %>
+            <div class="card" style="margin-left: auto; margin-right: auto; margin-top: 24px;">
+              <%= cl_image_tag flat.photo.key, width: 320, height: 260, crop: :fill, class: "card-img-top border_img" %>
+              <div class="card-body">
+                <p class="card-top-text"><%= flat.planet %></p>
+                <h5 class="card-title"><%= flat.name %></h5>
+                <p class="card_price"><%= flat.price %>$/night</p>
+              </div>
+            </div>
+            <% end %>
           </div>
+          <% end %>
         </div>
-        <% end %>
       </div>
-      <% end %>
     </div>
   </div>
+</div>
+</body>
+
