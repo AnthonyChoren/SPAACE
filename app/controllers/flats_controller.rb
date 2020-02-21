@@ -15,7 +15,7 @@ class FlatsController < ApplicationController
   end
 
   def create
-    @flat =Flat.new(flat_params)
+    @flat = Flat.new(flat_params)
     @flat.photo.attach(io: params[:flat][:photo], filename: "photo.jpg", content_type: "image/jpg")
     @flat.user = current_user
     if @flat.save
