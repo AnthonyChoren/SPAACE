@@ -17,7 +17,6 @@ mars.save!
 moon = Planet.create!(title: "Moon", description: "C’est la lune")
 moon.save!
 
-
 user = User.new(first_name: "user", last_name: "last", phone_number: "0615385223", email: "alice@gmail.com", password: "azerty")
 
 file = URI.open("https://res.cloudinary.com/dpdzk7keq/image/upload/v1582194397/SwFs1sqQmv8yj2tbXCbUzVZu.jpg")

@@ -7,6 +7,7 @@ class FlatsController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
   end
 
   def new
@@ -43,6 +44,10 @@ class FlatsController < ApplicationController
     else
       render :show
     end
+  end
+
+  def mars
+    @flats = Flat.where(planet: flat.planet)
   end
 
   private
