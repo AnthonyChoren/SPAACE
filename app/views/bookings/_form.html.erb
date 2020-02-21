@@ -1,6 +1,5 @@
 <%= simple_form_for([flat, booking]) do |f| %>
   <%= f.input :start_time %>
   <%= f.input :end_time %>
-
-  <%= f.submit "Make a booking", class: "btn btn-dark" %>
+  <%= f.button :submit %>
 <% end %>

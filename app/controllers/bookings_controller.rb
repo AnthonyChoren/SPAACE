@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
   end
 
   def create
-
+    @flat = Flat.find(params[:flat_id])
     @booking = Booking.new(booking_params)
     @booking.user_id = current_user.id
     @booking.flat = Flat.find(params[:flat_id])

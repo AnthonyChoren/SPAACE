@@ -49,7 +49,6 @@ ActiveRecord::Schema.define(version: 2020_02_20_171005) do
 
   create_table "flats", force: :cascade do |t|
     t.string "name"
-    t.string "planet"
     t.integer "capacity"
     t.integer "rating"
     t.text "description"
