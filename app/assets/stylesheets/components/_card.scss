@@ -6,16 +6,10 @@
 }
 
 .background_blur {
-  position: absolute;
-  left: 38%;
-  right: -1.74%;
-  top: 21%;
-  bottom: 28%;
-
   background: linear-gradient(0deg, rgba(81, 84, 109, 0.32), rgba(81, 84, 109, 0.32));
   backdrop-filter: blur(40px);
   /* Note: backdrop-filter has minimal browser support */
-
+  padding: 40px;
   border-radius: 24px;
 }
 
