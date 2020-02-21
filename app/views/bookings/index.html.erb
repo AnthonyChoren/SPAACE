@@ -1,23 +1,25 @@
-<div class="d-flex justify-content-between">
-  <h2 class="m-3">Bookings of  <%= current_user.first_name %>  <%= current_user.last_name %> </h2>
-  <%= link_to "Back home", flats_path, class: "btn btn-dark m-3"  %>
-</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 offset-sm-2">
+      <div class="d-flex justify-content-between">
+        <h2 class="m-3">Bookings of  <%= current_user.first_name %>  <%= current_user.last_name %> </h2>
+        <%= link_to "Back home", flats_path, class: "btn btn-dark m-3"  %>
+      </div>
 
-  <!-- add the cloudanary img -->
+        <!-- add the cloudanary img -->
 
-<div class="card ml-5 mr-5">
-<% @bookings.each do |booking| %>
-  <div class="mb-4">
-  <%= cl_image_tag booking.flat.photo.key, height: 200, crop: :fill, class: "card-img-top border_img" %>
-  <p class="card_text pl-2">The flat "<%= link_to booking.flat.name, flat_path(booking.flat) %>" is booked from  <%= booking.start_time %> to <%= booking.end_time%>.</p>
-  <p><%= link_to "Cancel Reservation", flat_booking_path(flat_id:booking.flat.id, id:booking.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-dark ml-2"  %></p>
+      <div class="card m-3">
+      <% @bookings.each do |booking| %>
+        <div class="mb-2">
+        <%= cl_image_tag booking.flat.photo.key, height: 200, crop: :fill, class: "card-img-top border_img" %>
+        <p class="card_text pt-2 pl-2">The flat "<%= link_to booking.flat.name, flat_path(booking.flat) %>" is booked from  <%= booking.start_time %> to <%= booking.end_time%>.</p>
+        <p><%= link_to "Cancel reservation", flat_booking_path(flat_id:booking.flat.id, id:booking.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-dark ml-2"  %></p>
+        </div>
+      <% end %>
+      </div>
+
+      <%= link_to "Back home", flats_path, class: "btn btn-dark mb-4 m-3"  %>
+    </div>
   </div>
-<% end %>
 </div>
-
-<%= link_to "Back home", flats_path, class: "btn btn-dark mb-4 m-3"  %>
-<!--
-
-
- <h1>flats I rent to someone </h1> -->
 
