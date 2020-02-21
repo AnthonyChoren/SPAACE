@@ -16,6 +16,9 @@ User.destroy_all
 moon = Planet.create!(title: "Moon", description: "C’est la lune")
 moon.save!
 
+mars = Planet.create!(title: "Mars", description: "C'est Mars")
+mars.save!
+
 user = User.new(first_name: "user", last_name: "last", phone_number: "0615385223", email: "alice@gmail.com", password: "azerty")
 
 
