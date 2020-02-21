@@ -1,9 +1,23 @@
 .flatcard {
   position: absolute;
   left: 8.33%;
-  right: 56.67%;
-  top: 45%;
+  top: 200px;
   padding: 10px;
+  width: 350px;
+
+  background: linear-gradient(0deg, rgba(81, 84, 109, 0.24), rgba(81, 84, 109, 0.24));
+  backdrop-filter: blur(56px);
+
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 0px 16px 16px 16px;
+}
+
+.flatcard-form {
+  position: absolute;
+  left: 8.33%;
+  top: 200px;
+  padding: 10px;
+  width: 350px;
 
   background: linear-gradient(0deg, rgba(81, 84, 109, 0.24), rgba(81, 84, 109, 0.24));
   backdrop-filter: blur(56px);
@@ -50,7 +64,7 @@
 
 .flatcard-image {
   position: absolute;
-  width: 80%;
+  width: 40%;
   height: 300px;
   left: 8.33%;
   top: 25%;

@@ -53,7 +53,7 @@ class FlatsController < ApplicationController
   end
 
   def flat_params
-    params.require(:flat).permit(:name, :capacity, :description, :price)
+    params.require(:flat).permit(:name, :planet_id, :capacity, :description, :price)
   end
 
 end
