@@ -7,6 +7,7 @@ class FlatsController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
   end
 
   def new
@@ -52,7 +53,7 @@ class FlatsController < ApplicationController
   end
 
   def flat_params
-    params.require(:flat).permit(:name, :planet, :capacity, :description, :price)
+    params.require(:flat).permit(:name, :capacity, :description, :price)
   end
 
 end
