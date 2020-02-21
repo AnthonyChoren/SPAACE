@@ -46,6 +46,10 @@ class FlatsController < ApplicationController
     end
   end
 
+  def mars
+    @flats = Flat.where(planet: flat.planet)
+  end
+
   private
 
   def set_flat
@@ -53,7 +57,7 @@ class FlatsController < ApplicationController
   end
 
   def flat_params
-    params.require(:flat).permit(:name, :capacity, :description, :price)
+    params.require(:flat).permit(:name, :planet_id, :capacity, :description, :price)
   end
 
 end

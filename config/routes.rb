@@ -5,5 +5,11 @@ Rails.application.routes.draw do
   resources :flats do
     resources :bookings
   end
-  resources :planets, only: [:show]
+  resources :planets, only: [:show]  do
+    collection do
+      get 'mars'
+
+
+    end
+  end
 end
